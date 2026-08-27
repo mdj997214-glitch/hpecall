@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Alert, TextInput } from 'react-native';
 
 export default function App() {
-  const [userInfo, setUserInfo] = useState(false);
+  const [userInfo, setUserInfo] = useState(null);
   const [callId, setCallId] = useState('');
+
+  const handleGoogleLogin = () => {
+    // ডেমো জিমেইল লগইন সেটআপ
+    setUserInfo({ name: 'User', email: 'user@gmail.com' });
+    Alert.alert('সফল!', 'গুগল দিয়ে সফলভাবে প্রবেশ করেছেন');
+  };
 
   const handleStartCall = () => {
     if (!callId) {
@@ -22,18 +28,18 @@ export default function App() {
           <Text style={styles.subTitle}>অ্যাপ ব্যবহার করতে প্রবেশ করুন</Text>
           <TouchableOpacity
             style={styles.googleBtn}
-            onPress={() => setUserInfo(true)}
+            onPress={handleGoogleLogin}
           >
-            <Text style={styles.btnText}>লগইন করুন</Text>
+            <Text style={styles.btnText}>Google দিয়ে লগইন করুন</Text>
           </TouchableOpacity>
         </View>
       ) : (
         <View style={styles.card}>
           <Text style={styles.welcomeText}>স্বাগতম! আপনি অনলাইনে আছেন</Text>
-          
+
           <TextInput
             style={styles.input}
-            placeholder="যাকে কল করবেন তার আইডি লিখুন"
+            placeholder="যাকে কল করবেন তার আইডি দিন"
             value={callId}
             onChangeText={setCallId}
             keyboardType="numeric"
@@ -43,9 +49,9 @@ export default function App() {
             <Text style={styles.btnText}>📞 কল শুরু করুন</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity 
-            style={styles.logoutBtn} 
-            onPress={() => setUserInfo(false)}
+          <TouchableOpacity
+            style={styles.logoutBtn}
+            onPress={() => setUserInfo(null)}
           >
             <Text style={{ color: '#ff3b30', marginTop: 15, textAlign: 'center' }}>
               লগআউট করুন
@@ -116,5 +122,8 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     fontSize: 16,
     marginBottom: 10,
+  },
+  logoutBtn: {
+    marginTop: 10,
   },
 });
