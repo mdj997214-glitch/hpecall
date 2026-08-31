@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "hpecall",
+    "slug": "hpecall",
+    "version": "1.0.0",
+    "sdkVersion": "51.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "hpecall",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "android": {
+      "package": "com.hpecall.app"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4b3d6b1c-762e-459b-b3e7-ddbf2a54d37a"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.hpecall.app"
+    }
+  }
+}
