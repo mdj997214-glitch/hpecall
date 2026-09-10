@@ -1,26 +1,56 @@
 {
   "expo": {
-    "name": "hpecall",
+    "name": "HPE Call",
     "slug": "hpecall",
     "version": "1.0.0",
-    "sdkVersion": "51.0.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "light",
     "scheme": "hpecall",
+    "icon": "./assets/logo.png",
+
     "splash": {
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#023c69"
     },
+
     "android": {
-      "package": "com.hpecall.app"
+      "package": "com.hpecall.hpecall",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.INTERNET",
+        "android.permission.READ_CONTACTS"
+      ]
     },
+
+    "ios": {
+      "bundleIdentifier": "com.hpecall.hpecall",
+      "infoPlist": {
+        "NSCameraUsageDescription": "HPE Call ভিডিও কলের জন্য ক্যামেরা ব্যবহার করে",
+        "NSMicrophoneUsageDescription": "HPE Call অডিও ও ভিডিও কলের জন্য মাইক্রোফোন ব্যবহার করে",
+        "NSContactsUsageDescription": "HPE Call বন্ধুদের খুঁজে পেতে কন্টাক্ট ব্যবহার করে"
+      }
+    },
+
     "extra": {
       "eas": {
         "projectId": "4b3d6b1c-762e-459b-b3e7-ddbf2a54d37a"
       }
     },
-    "ios": {
-      "bundleIdentifier": "com.hpecall.app"
-    }
+
+    "plugins": [
+      [
+        "@config-plugins/react-native-webrtc",
+        {
+          "cameraPermission": "HPE Call ভিডিও কলের জন্য ক্যামেরা ব্যবহার করে",
+          "microphonePermission": "HPE Call অডিও ও ভিডিও কলের জন্য মাইক্রোফোন ব্যবহার করে"
+        }
+      ]
+    ]
   }
 }

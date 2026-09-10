@@ -6,35 +6,27 @@
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web",
-    "lint": "eslint ."
+    "web": "expo start --web"
   },
   "dependencies": {
     "@config-plugins/react-native-webrtc": "^10.0.0",
     "@react-native-async-storage/async-storage": "1.23.1",
-    "@react-native-community/netinfo": "11.3.1",
     "@supabase/supabase-js": "^2.45.0",
-    "base64-arraybuffer": "^1.0.2",
     "expo": "~51.0.28",
     "expo-auth-session": "~5.5.2",
-    "expo-av": "~14.0.7",
-    "expo-contacts": "~13.0.5",
+    "expo-contacts": "~13.0.6",
     "expo-dev-client": "~4.0.28",
-    "expo-image-picker": "~15.1.0",
-    "expo-linking": "~6.3.1",
     "expo-status-bar": "~1.12.1",
     "expo-web-browser": "~13.0.3",
     "react": "18.2.0",
     "react-native": "0.74.5",
     "react-native-gesture-handler": "~2.16.1",
     "react-native-incall-manager": "^4.2.0",
-    "react-native-url-polyfill": "^2.0.0",
-    "react-native-webrtc": "^124.0.5"
+    "react-native-webrtc": "^124.0.5",
+    "react-native-url-polyfill": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
-    "eslint": "^8.57.0",
-    "eslint-config-expo": "~7.1.2"
+    "@babel/core": "^7.20.0"
   },
   "private": true,
   "expo": {
